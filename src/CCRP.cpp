@@ -20,13 +20,15 @@ int edge[nodes + 5][nodes + 5][max_time_series + 5]; // edge capacity at any tim
 
 vector<vector<int>>node(nodes + 5, vector<int>(max_time_series)); // node capacity at any time
 
-vector<int>source{ 1,2,8 }; // source nodes
+vector<int>source{1 , 2 , 8 }; // source nodes
+
+vector<int>priority_source{}; //priority nodes
 
 vector<int>dest{ 13,14 };  // destination nodes
 
-int occupied[nodes + 5][nodes + 5][max_time_series + 5];
-
 vector<int>curr_src(nodes + 5); //current src capacity , number of evacuees.
+
+vector<int>mark((int)source.size());  //mark source nodes which are done
 
 int departure(int from, int to, int reach)
 {
@@ -89,8 +91,6 @@ tuple<vector<int>, vector<int>> dijkstra(int src)
 	return { path, time };
 }
 
-vector<int>mark((int)source.size());  //mark source nodes which are done
-
 tuple<vector<int>, vector<int>> shortest_path()
 {
 	for (int i = 0; i < (int)source.size(); i++) {
@@ -132,9 +132,6 @@ int reserve_the_path(vector<int>path, vector<int>time)
 	}
 	for (int i = 1; i < (int)path.size(); i++) {
 		edge[path[i - 1]][path[i]][time[i - 1]] -= f;
-	}
-	for (int i = 1; i < (int)path.size(); i++) {
-		occupied[path[i - 1]][path[i]][time[i - 1]] = 1;
 	}
 	//cout << f << ' ';
 	curr_src[path[0]] -= f;
@@ -214,13 +211,6 @@ void input()
 		int sz;
 		cin >> sz;
 		curr_src[source[i]] = sz;
-	}
-	for (int i = 0; i <= nodes; i++) {
-		for (int j = 0; j <= nodes; j++) {
-			for (int k = 0; k < max_time_series; k++) {
-				occupied[i][j][k] = 0;
-			}
-		}
 	}
 	CCRP();
 	//cout << _cnt << '\n';
