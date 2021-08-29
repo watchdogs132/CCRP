@@ -1,4 +1,4 @@
-##Input Graph 
+## Input Graph 
 
-![image](https://user-images.githubusercontent.com/23136178/131255152-b7760f91-9427-4d96-8259-8d622a6c92dc.png)
+![image](https://user-images.githubusercontent.com/23136178/131255201-2df0ff55-d4b6-4c10-a175-6531c1a5415e.png)
 
