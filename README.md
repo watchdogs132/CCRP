@@ -18,7 +18,9 @@
 
   - Priority Nodes: Waiting time of evacuees in these nodes need to be minimized .
 
-  - Edges and nodes have capacities which can not be violated. We keep of track of these capacities at each time step . Destination nodes are assumed to have a very large capacity.
+  - Edges and nodes have capacities which can not be violated. We keep of track of these capacities at each time step . 
+  
+  - Destination nodes are assumed to have a very large capacity.
 
   - Number of evacuees that can travel through a path is considered to be the minimum of the capacities of the nodes and edges on that path.
 
