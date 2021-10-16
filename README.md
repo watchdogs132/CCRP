@@ -39,18 +39,18 @@ Minimize evacuation egress time which is the time from the start of evacuation t
 
   - Find the route with the earliest arrival time to any destination node from any source node, taking previous reservations and possible wait times into consideration. It is to be noted that this is the path with the earliest arrival time at a destination (starting from t=0). 
 
-Also, it may happen that people may have to wait at the source to get the path with the earliest arrival at the destination.This can be done by using a generalized version of Dijkstra’s algorithm. 
+  Also, it may happen that people may have to wait at the source to get the path with the earliest arrival at the destination.This can be done by using a generalized version of   Dijkstra’s algorithm. 
 
-To avoid calculating the earliest arrival time route for every pair of source and destination nodes, a pseudo source node can be considered and edges with zero travel time and infinite capacity can be added between the pseudo node and all other nodes in the network. 
+  To avoid calculating the earliest arrival time route for every pair of source and destination nodes, a pseudo source node can be considered and edges with zero travel time and   infinite capacity can be added between the pseudo node and all other nodes in the network. 
 
-In our implementation we haven't considered this and instead calculated earliest arrival path for all source destination pairs.
+  In our implementation we haven't considered this and instead calculated earliest arrival path for all source destination pairs.
 
-  - Allocate evacuees to that path i.e. min (number of current evacuees at source, available edge capacity (all edges on chosen route), available node capacity (all intermediate nodes on chosen route))
+  - Allocate evacuees to that path i.e. min (number of current evacuees at source, available edge capacity (all edges on chosen route), available node capacity (all intermediate     nodes on chosen route))
 
   - Reserve the path by reducing the available capacity of edges and nodes on the chosen path by the number of evacuees considered.
 
   - Do the above steps while there are evacuees left to be routed.
 
-Since we are greedily assigning evacuees to the shortest route, this way we are trying to minimize the total egress time. This algorithm is fast, scalable, and produces good routes, however, there are some drawbacks.
+   Since we are greedily assigning evacuees to the shortest route, this way we are trying to minimize the total egress time. This algorithm is fast, scalable, and produces good    routes, however, there are some drawbacks.
 
 
