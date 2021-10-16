@@ -1,6 +1,6 @@
 ## Standard CCRP ( Capacity Constrained Route Planning )
 
-## Input 
+### Input 
 
 (1) A road network G = (N, E) where N is the set of nodes and E is the set of edges.
 
@@ -16,15 +16,15 @@
 
 (7) Reservation tables will be maintained for all nodes and edges. These tables will store the capacities across the time series (from start to end of evacuation).
 
-## Output 
+### Output 
 
 Evacuation plan consisting of a set of origin-destination routes and scheduling of evacuees on each route.
 
-## Objective 
+### Objective 
 
 Minimize evacuation egress time which is the time from the start of evacuation to the last evacuee reaching a destination 
 
-## Constraints
+### Constraints
 
 (1) Every edge and node in the network have a capacity that can’t be violated.
 
@@ -35,7 +35,7 @@ Minimize evacuation egress time which is the time from the start of evacuation t
 (4) Evacuees start from and end up at nodes
 
 
-## Algorithm for Standard CCRP 
+### Algorithm for Standard CCRP 
 
   - Find the route with the earliest arrival time to any destination node from any source node, taking previous reservations and possible wait times into consideration. It is to be noted that this is the path with the earliest arrival time at a destination (starting from t=0). 
 
@@ -53,7 +53,7 @@ Minimize evacuation egress time which is the time from the start of evacuation t
 
    Since we are greedily assigning evacuees to the shortest route, this way we are trying to minimize the total egress time. This algorithm is fast, scalable, and produces good    routes, however, there are some drawbacks.
 
-## Example Input 
+### Example Input 
 
 N1 , N2 , N8 are the source nodes which contain the Evacuees .
 
