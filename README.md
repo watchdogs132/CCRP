@@ -55,5 +55,9 @@ Minimize evacuation egress time which is the time from the start of evacuation t
 
 ## Example Input 
 
+N1 , N2 , N8 are the source nodes which contain the Evacuees .
+
+N14 and N13 are the destination nodes.
+
 ![image](https://user-images.githubusercontent.com/23136178/137586153-a5324670-6df7-43d7-8f7b-a0ab77f38c31.png)
 
