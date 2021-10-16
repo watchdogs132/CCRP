@@ -1,5 +1,6 @@
-// from to time[from][to] capacity[from][to]
+// Format of input 
 // In this example 12 normal nodes and 2 destination nodes
+// from to time[from][to] capacity[from][to]
 1 3 7 1
 3 4 3 3 
 3 5 3 3 
