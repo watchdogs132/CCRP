@@ -1,6 +1,6 @@
 ### Standard CCRP (Capacity Constrained Route Planning )
 
-**Input: ** 
+**Input:** 
 
 (1) A road network G = (N, E) where N is the set of nodes and E is the set of edges.
 
@@ -20,7 +20,7 @@
 
 **Objective:** Minimize evacuation egress time which is the time from the start of evacuation to the last evacuee reaching a destination 
 
-**Constraints: **
+**Constraints:**
 
 (1) Every edge and node in the network have a capacity that can’t be violated.
 
