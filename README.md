@@ -51,7 +51,7 @@ Minimize evacuation egress time which is the time from the start of evacuation t
 
   - Do the above steps while there are evacuees left to be routed.
 
-   Since we are greedily assigning evacuees to the shortest route, this way we are trying to minimize the total egress time. This algorithm is fast, scalable, and produces good    routes, however, there are some drawbacks.
+   Since we are greedily assigning evacuees to the shortest route, this way we are trying to minimize the total egress time.
 
 ### Example Input 
 
